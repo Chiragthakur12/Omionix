@@ -1,0 +1,300 @@
+/* style.css */
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background-color: #0d0c1d;
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #050414;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #66fcf1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 120px 20px 80px;
+  background: url('https://www.transparenttextures.com/patterns/black-linen.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 64px;
+  margin-bottom: 20px;
+  color: #66fcf1;
+  animation: slideIn 1s ease forwards;
+}
+
+.hero p {
+  font-size: 22px;
+  color: #ccc;
+  animation: fadeIn 2s ease forwards;
+}
+
+/* Help Section */
+.help-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: #12122b;
+  padding: 80px 20px;
+  gap: 60px;
+}
+
+.help-box, .about {
+  max-width: 480px;
+}
+
+.help-box h3,
+.about h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.help-box p {
+  font-size: 16px;
+  color: #cccccc;
+  margin-bottom: 10px;
+}
+
+.sub-text {
+  color: #b0bec5;
+  margin: 15px 0;
+}
+
+/* Buttons */
+.btn {
+  background: #00bcd4;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #0097a7;
+  transform: scale(1.05);
+}
+
+/* Services Section */
+.services {
+  padding: 80px 20px;
+  background-color: #0e0e2c;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+  color: #ffffff;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.card {
+  background: #1f1f3d;
+  padding: 30px 20px;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3);
+}
+
+/* Reviews */
+.reviews {
+  padding: 80px 20px;
+  background: #12122b;
+}
+
+.reviews h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.review-slider {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.review {
+  background: #1e1e38;
+  padding: 25px;
+  border-radius: 12px;
+  width: 280px;
+  text-align: center;
+}
+
+.review h4 {
+  margin-bottom: 10px;
+  color: #00bcd4;
+}
+
+/* Footer */
+footer {
+  background: #0b0b1c;
+  padding: 60px 20px;
+  color: #ddd;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-links div {
+  min-width: 200px;
+}
+
+footer input[type="email"] {
+  padding: 10px;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+}
+
+footer a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .btn {
+  margin-top: 10px;
+}
+
+/* Copyright */
+footer p.copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.8s ease-out;
+}
+
+.card, .review, .help-box, .about {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+}
